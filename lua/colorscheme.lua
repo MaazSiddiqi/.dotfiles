@@ -16,8 +16,6 @@ vim.g.nord_italic = false
 vim.g.nord_uniform_diff_background = true
 
 local colorscheme = "nord"
---[[ local colorscheme = "darkplus" ]]
---[[ local colorscheme = "onedark" ]]
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

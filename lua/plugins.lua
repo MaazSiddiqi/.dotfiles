@@ -52,8 +52,6 @@ return require('packer').startup(function(use)
 
   --Color Schemes
   use "shaunsingh/nord.nvim"
-  -- use "arcticicestudio/nord-vim"
-  -- use "folke/tokyonight.nvim"
   -- use "lunarvim/darkplus.nvim"
   -- use "ChristianChiarulli/nvcode-color-schemes.vim"
 
