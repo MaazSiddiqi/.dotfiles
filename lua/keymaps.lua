@@ -60,39 +60,3 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
-
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
--- -- LSP / Format / Buffers
--- keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
--- keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
--- keymap("n", "<leader>k", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
--- keymap("n", "<leader>s", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
--- keymap("n", "<leader>p", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
--- keymap("n", "<leader>P", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
--- keymap("n", "<leader>l", "<cmd>CodeActionMenu<CR>", opts)
--- keymap("n", "<leader>;", "<cmd>bd<CR>", opts)
--- keymap("n", "<leader>z", "zR", opts)
-
--- -- Extensions
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
--- keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
--- --[[ keymap("n", "<leader>p", "<cmd>Telescope registers<cr>", opts) ]]
--- keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
-
--- keymap("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
--- keymap("n", "gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", opts)
--- keymap("n", "gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opts)
--- keymap("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
--- keymap("n", "gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", opts)
-
-
--- keymap("n", "<leader>oo", "<cmd>TSLspOrganize<CR>", opts)
--- keymap("n", "<leader>or", "<cmd>TSLspRenameFile<CR>", opts)
--- keymap("n", "<leader>oa", "<cmd>TSLspImportAll<CR>", opts)
