@@ -58,6 +58,14 @@ return require('packer').startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
+  -- Nvim Tree
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   ---@diagnostic disable-next-line: undefined-global
