@@ -17,3 +17,5 @@ require("colorscheme")
 -- plugins configs
 require("telescope")
 require("nvimtree")
+require("lsp")
+require("mycmp")
