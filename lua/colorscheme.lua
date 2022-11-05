@@ -15,11 +15,8 @@ vim.g.nord_disable_background = false
 vim.g.nord_italic = false
 vim.g.nord_uniform_diff_background = true
 
--- Load the colorscheme
-require('nord').set()
-
---[[ local colorscheme = "darkplus" ]]
 local colorscheme = "nord"
+--[[ local colorscheme = "darkplus" ]]
 --[[ local colorscheme = "onedark" ]]
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
