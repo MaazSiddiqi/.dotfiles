@@ -15,7 +15,8 @@ require("keymaps")
 require("colorscheme")
 
 -- plugins configs
-require("telescope")
-require("nvimtree")
 require("lsp")
 require("mycmp")
+require("telescope")
+require("mytreesitter")
+require("nvimtree")

@@ -87,6 +87,10 @@ return require('packer').startup(function(use)
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch onippets to -- use
 
+  -- Treesitter
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   ---@diagnostic disable-next-line: undefined-global
