@@ -60,3 +60,9 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Extensions
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>p", "<cmd>Telescope registers<cr>", opts)
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)

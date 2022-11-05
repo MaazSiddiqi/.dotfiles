@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
   -- use "lunarvim/darkplus.nvim"
   -- use "ChristianChiarulli/nvcode-color-schemes.vim"
 
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   ---@diagnostic disable-next-line: undefined-global

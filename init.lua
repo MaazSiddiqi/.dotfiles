@@ -13,3 +13,6 @@ require("plugins")
 require("options")
 require("keymaps")
 require("colorscheme")
+
+-- plugins configs
+require("telescope")
