@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
     url = "https://github.com/christianchiarulli/lua-dev.nvim"
   },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/packer.nvim",

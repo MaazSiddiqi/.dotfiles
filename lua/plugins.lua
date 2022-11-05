@@ -50,6 +50,13 @@ return require('packer').startup(function(use)
   use "nvim-lua/popup.nvim"
   use "christianchiarulli/lua-dev.nvim"
 
+  --Color Schemes
+  use "shaunsingh/nord.nvim"
+  -- use "arcticicestudio/nord-vim"
+  -- use "folke/tokyonight.nvim"
+  -- use "lunarvim/darkplus.nvim"
+  -- use "ChristianChiarulli/nvcode-color-schemes.vim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   ---@diagnostic disable-next-line: undefined-global
