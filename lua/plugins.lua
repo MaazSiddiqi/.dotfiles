@@ -90,6 +90,14 @@ return require('packer').startup(function(use)
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+
+  -- Utilities
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to -- use `main` branch for the latest features
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
