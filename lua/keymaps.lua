@@ -18,6 +18,8 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>", opts)
+
 -- NORMAL --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -74,3 +76,15 @@ keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 keymap("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<cr>", opts)
 keymap("n", "<leader>E", "<cmd>NvimTreeToggle<cr>", opts)
+
+keymap("n", "<leader>gj", "<cmd>Gitsigns next_hunk<cr>", opts)
+keymap("n", "<leader>gk", "<cmd>Gitsigns prev_hunk<cr>", opts)
+keymap("n", "<leader>gi", "<cmd>Gitsigns preview_hunk<cr>", opts)
+keymap("n", "<leader>gI", "<cmd>Gitsigns preview_hunk_inline<cr>", opts)
+keymap("n", "<leader>gw", "<cmd>Gitsigns stage_hunk<cr>", opts)
+keymap("n", "<leader>gw", "<cmd>Gitsigns stage_buffer<cr>", opts)
+keymap("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<cr>", opts)
+keymap("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", opts)
+keymap("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<cr>", opts)
+keymap("o", "ih", ":<C-U>Gitsigns select_hunk<CR>", opts)
+keymap("x", "ih", ":<C-U>Gitsigns select_hunk<CR>", opts)
