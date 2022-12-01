@@ -15,7 +15,7 @@ vim.g.nord_disable_background = false
 vim.g.nord_italic = false
 vim.g.nord_uniform_diff_background = true
 
-local colorscheme = "catppuccin-frappe"
+local colorscheme = "catppuccin-frappe" -- nord | catppuccin-frappe | darkplus | 
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
