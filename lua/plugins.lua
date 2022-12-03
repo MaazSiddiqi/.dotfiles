@@ -105,7 +105,6 @@ return require("packer").startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 
 	-- Utilities
-  --- STILL NOT DONE
 	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to -- use `main` branch for the latest features
