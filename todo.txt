@@ -1,12 +1,7 @@
 INTERESTING PLUGINS:
 
 
-https://github.com/kevinhwang91/nvim-ufo - modern code folding
-https://github.com/zbirenbaum/neodim - dimming the highlights of unused functions, variables, parameters, and more
-https://github.com/folke/zen-mode.nvim - zen mode editing
-https://github.com/folke/twilight.nvim - dim inactive portions of code for better focus, works well with zen-mode
 https://github.com/andrewferrier/textobj-diagnostic.nvim - motion and textobject for navigating diagnostics 
-https://git.sr.ht/~whynothugo/lsp_lines.nvim - cleaner virtual diagnostics
 https://github.com/RRethy/nvim-treesitter-textsubjects - balance in/out of code scopes
 https://github.com/jose-elias-alvarez/typescript.nvim - typescript
 https://github.com/kosayoda/nvim-lightbulb - visual lightbulb if code action availablie
@@ -42,3 +37,7 @@ https://github.com/stevearc/aerial.nvim - alternative code outline plugin
 https://github.com/rest-nvim/rest.nvim - rest client in nvim
 https://github.com/marko-cerovac/material.nvim - colorscheme (palenight looks cool)
 https://github.com/sainnhe/edge - rlly clean colorscheme
+
+
+ISSUES
+https://git.sr.ht/~whynothugo/lsp_lines.nvim - cleaner virtual diagnostics
