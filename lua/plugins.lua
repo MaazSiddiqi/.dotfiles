@@ -109,6 +109,10 @@ return require("packer").startup(function(use)
 
 	-- UI
 	-- use("folke/trouble.nvim")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")

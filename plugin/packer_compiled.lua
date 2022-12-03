@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/lua-dev.nvim",
     url = "https://github.com/christianchiarulli/lua-dev.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
