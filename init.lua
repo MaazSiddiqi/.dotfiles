@@ -23,4 +23,7 @@ require("nvimtree")
 require("git-signs")
 require("hl-args")
 require("surround")
+require("myneodim")
+
+
 -- require("ufo-folds")
