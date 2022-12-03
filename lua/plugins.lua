@@ -112,8 +112,10 @@ return require("packer").startup(function(use)
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to -- use `main` branch for the latest features
 	})
-  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
-use "folke/zen-mode.nvim"
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+	use("folke/zen-mode.nvim")
+	use("folke/twilight.nvim")
+	use({ "zbirenbaum/neodim", event = "LspAttach" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

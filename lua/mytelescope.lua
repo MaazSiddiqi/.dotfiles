@@ -79,13 +79,17 @@ telescope.setup({
 				["<C-k>"] = actions.move_selection_previous,
 
 				["<C-c>"] = actions.close,
+				["<esc>"] = actions.close,
 
 				["<Down>"] = actions.move_selection_next,
 				["<Up>"] = actions.move_selection_previous,
 
 				["<CR>"] = actions.select_default,
+				[";"] = actions.select_default,
+
 				["<C-x>"] = actions.select_horizontal,
 				["<C-v>"] = actions.select_vertical,
+				[":"] = actions.select_vertical,
 				["<C-t>"] = actions.select_tab,
 
 				["<C-u>"] = actions.preview_scrolling_up,
@@ -103,10 +107,14 @@ telescope.setup({
 			},
 
 			n = {
-				["H"] = actions.close,
-				["<CR>"] = actions.select_default,
+				["h"] = actions.close,
+				["<esc>"] = actions.close,
+
+				["l"] = actions.select_default,
+				[";"] = actions.select_default,
+
 				["<C-x>"] = actions.select_horizontal,
-				["l"] = actions.select_vertical,
+				["L"] = actions.select_vertical,
 				["<C-t>"] = actions.select_tab,
 
 				["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,

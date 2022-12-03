@@ -68,7 +68,6 @@ keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 keymap("n", "<leader>;", "<cmd>bd<CR>", opts)
 
 
-
 -- Extensions
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
@@ -90,3 +89,5 @@ keymap("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", opts)
 keymap("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<cr>", opts)
 keymap("o", "ih", ":<C-U>Gitsigns select_hunk<CR>", opts)
 keymap("x", "ih", ":<C-U>Gitsigns select_hunk<CR>", opts)
+
+keymap("n", "<leader>z", "<cmd>ZenMode<cr>", opts)
