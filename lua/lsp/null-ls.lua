@@ -25,11 +25,11 @@ null_ls.setup({
   -- end,
   debug = false,
   sources = {
-    formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-    formatting.black.with({ extra_args = { "" } }),
+    formatting.prettierd.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
+    formatting.prismaFmt,
     formatting.stylua,
-    -- diagnostics.eslint_d,
-    -- code_actions.eslint_d,
-    -- code_actions.gitsigns,
+    diagnostics.eslint_d,
+    code_actions.eslint_d,
+    code_actions.gitsigns,
   },
 })

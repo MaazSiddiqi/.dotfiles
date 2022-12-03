@@ -16,7 +16,6 @@ https://github.com/ray-x/lsp_signature.nvim - shows signature help when calling 
 https://github.com/rmagatti/goto-preview - floating previews windows
 https://github.com/ldelossa/litee.nvim - comprehensive code outline tool
 https://github.com/lukas-reineke/cmp-under-comparator - better lsp sorting
-https://github.com/github/copilot.vim - Github copilot
 https://github.com/ThePrimeagen/harpoon - harpoon for better marks and inter-file navigation
 https://github.com/brenoprata10/nvim-highlight-colors - color highlights (useful for tailwind)
 https://github.com/nvim-colortils/colortils.nvim - nice color picking in nvim

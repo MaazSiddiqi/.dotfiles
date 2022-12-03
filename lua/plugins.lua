@@ -57,8 +57,8 @@ return require("packer").startup(function(use)
 	use("catppuccin/nvim")
 	use("kvrohit/substrata.nvim")
 	use("sainnhe/edge")
-  use("sainnhe/gruvbox-material")
-  use("olimorris/onedarkpro.nvim")
+	use("sainnhe/gruvbox-material")
+	use("olimorris/onedarkpro.nvim")
 	-- use "lunarvim/darkplus.nvim"
 	-- use "ChristianChiarulli/nvcode-color-schemes.vim"
 
@@ -101,6 +101,9 @@ return require("packer").startup(function(use)
 		requires = { "nvim-treesitter/nvim-treesitter" },
 	})
 
+	-- UI
+	-- use("folke/trouble.nvim")
+
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 
@@ -109,6 +112,8 @@ return require("packer").startup(function(use)
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to -- use `main` branch for the latest features
 	})
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+use "folke/zen-mode.nvim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
