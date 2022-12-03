@@ -50,6 +50,7 @@ return require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	use("nvim-lua/popup.nvim")
 	use("christianchiarulli/lua-dev.nvim")
+	use("ldelossa/litee.nvim")
 
 	--Color Schemes
 	use("shaunsingh/nord.nvim")
@@ -64,6 +65,8 @@ return require("packer").startup(function(use)
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
+	use({ "nvim-telescope/telescope-ui-select.nvim" })
+use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
 	-- Nvim Tree
 	use({
@@ -106,6 +109,10 @@ return require("packer").startup(function(use)
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
+	use({
+		"ldelossa/gh.nvim",
+		requires = { { "ldelossa/litee.nvim" } },
+	})
 
 	-- Utilities
 	use({
@@ -115,7 +122,7 @@ return require("packer").startup(function(use)
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 	use("folke/zen-mode.nvim")
 	use("folke/twilight.nvim")
-	use({ "zbirenbaum/neodim", event = "LspAttach" })
+	use({ "zbirenbaum/neodim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
