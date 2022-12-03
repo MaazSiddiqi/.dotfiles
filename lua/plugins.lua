@@ -56,6 +56,9 @@ return require("packer").startup(function(use)
 	use("lunarvim/colorschemes")
 	use("catppuccin/nvim")
 	use("kvrohit/substrata.nvim")
+	use("sainnhe/edge")
+  use("sainnhe/gruvbox-material")
+  use("olimorris/onedarkpro.nvim")
 	-- use "lunarvim/darkplus.nvim"
 	-- use "ChristianChiarulli/nvcode-color-schemes.vim"
 
