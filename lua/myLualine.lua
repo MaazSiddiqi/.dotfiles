@@ -94,21 +94,21 @@ require('lualine').setup {
     lualine_a = { 'mode' },
     lualine_b = {
       'branch',
+      { 'filename', file_status = false, path = 1 },
       'diff',
       {
         'diagnostics',
         source = { 'nvim' },
         sections = { 'error' },
-        diagnostics_color = { error = { bg = colors.red, fg = colors.white } },
+        diagnostics_color = { error = { bg = colors.red, fg = colors.black } },
       },
       {
         'diagnostics',
         source = { 'nvim' },
         sections = { 'warn' },
-        diagnostics_color = { warn = { bg = colors.orange, fg = colors.white } },
+        diagnostics_color = { warn = { bg = colors.orange, fg = colors.black } },
       },
-      { 'filename', file_status = false, path = 1 },
-      { modified, color = { bg = colors.red } },
+      { modified, color = { bg = colors.red, fg = colors.black } },
       {
         '%w',
         cond = function()

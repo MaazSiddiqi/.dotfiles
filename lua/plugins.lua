@@ -106,6 +106,7 @@ return require("packer").startup(function(use)
 		"m-demare/hlargs.nvim",
 		requires = { "nvim-treesitter/nvim-treesitter" },
 	})
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- UI
 	-- use("folke/trouble.nvim")
@@ -113,6 +114,7 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
@@ -131,6 +133,8 @@ return require("packer").startup(function(use)
 			require("octo").setup()
 		end,
 	})
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+
 	-- Utilities
 	use({
 		"kylechui/nvim-surround",
@@ -140,7 +144,9 @@ return require("packer").startup(function(use)
 	use("folke/zen-mode.nvim")
 	use("folke/twilight.nvim")
 	use({ "zbirenbaum/neodim" })
-
+	use({
+		"numToStr/Comment.nvim",
+	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	---@diagnostic disable-next-line: undefined-global
