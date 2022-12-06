@@ -18,9 +18,10 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
-keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>", opts)
 
 -- NORMAL --
+keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -40,6 +41,11 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+
+keymap("n", "dtb", "dt)", opts)
+keymap("n", "dtB", "dt}", opts)
+keymap("n", "dTb", "dT(", opts)
+keymap("n", "dTB", "dT{", opts)
 
 -- INSERT --
 -- Press jk fast to exit insert mode
@@ -69,7 +75,8 @@ keymap("n", "<leader>;", "<cmd>bd<CR>", opts)
 
 
 -- Extensions
-keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", opts)
+keymap("n", ";", "<cmd>Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>p", "<cmd>Telescope registers<cr>", opts)
 keymap("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)

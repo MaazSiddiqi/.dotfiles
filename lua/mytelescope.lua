@@ -88,7 +88,7 @@ telescope.setup({
 
 				["<C-x>"] = actions.select_horizontal,
 				["<C-v>"] = actions.select_vertical,
-				[":"] = actions.select_vertical,
+				["<C-;>"] = actions.select_vertical,
 				["<C-t>"] = actions.select_tab,
 
 				["<C-u>"] = actions.preview_scrolling_up,

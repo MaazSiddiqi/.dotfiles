@@ -25,7 +25,7 @@ null_ls.setup({
   -- end,
   debug = false,
   sources = {
-    formatting.prettierd.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
+    formatting.prettierd.with({ extra_args = {} }),
     formatting.prismaFmt,
     formatting.stylua,
     diagnostics.eslint_d,
