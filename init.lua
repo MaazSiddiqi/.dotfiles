@@ -16,6 +16,7 @@ require("colorscheme")
 
 -- plugins configs
 require("lsp")
+-- require("myCopilot")
 require("mycmp")
 require("mytreesitter")
 require("myLualine")
@@ -25,6 +26,7 @@ require("nvimtree")
 require("git-signs")
 
 require("surround")
+require("myautopairs")
 require("myComment")
 require("hl-args")
 require("myneodim")
@@ -32,3 +34,4 @@ require("myneodim")
 require("myLitee")
 require("my-gh")
 require("myOcto")
+
