@@ -9,7 +9,7 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
-
+local types = require('cmp.types')
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
@@ -53,12 +53,20 @@ cmp.setup({
 	},
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+		["<C-j>"] = cmp.mapping(function(fallback)
+			if not cmp.visible() then
+				cmp.complete()
+			elseif cmp.visible() then
+				cmp.select_next_item()
+			else
+				fallback()
+			end
+		end),
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
 		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-		["<C-e>"] = cmp.mapping({
+		["<C-h>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
@@ -95,18 +103,26 @@ cmp.setup({
 			"s",
 		}),
 	},
+	completion = {
+		autocomplete = {
+			types.cmp.TriggerEvent.TextChanged,
+		},
+		completeopt = "menu,menuone,noselect",
+		keyword_pattern = [[\%(-\?\d\+\%(\.\d\+\)\?\|\h\w*\%(-\w*\)*\)]],
+		keyword_length = 1,
+	},
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
 			-- Kind icons
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+			-- vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 			vim_item.menu = ({
-				nvim_lsp = "[LSP]",
-				nvim_lua = "[LSP]",
-				luasnip = "[Snippet]",
-				buffer = "[Buffer]",
-				path = "[Path]",
+				nvim_lua = "lsp",
+				nvim_lsp = "lsp",
+				luasnip = "lsnip",
+				buffer = "buf",
+				path = "path",
 			})[entry.source.name]
 			return vim_item
 		end,
