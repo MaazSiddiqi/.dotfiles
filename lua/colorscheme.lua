@@ -16,8 +16,6 @@ vim.g.nord_italic = false
 vim.g.nord_uniform_diff_background = true
 
 require("onedarkpro").setup({
-  dark_theme = "onedark", -- The default dark theme
-  light_theme = "onelight", -- The default light theme
   caching = false, -- Use caching for the theme?
   cache_path = vim.fn.expand(vim.fn.stdpath("cache") .. "/onedarkpro/"), -- The path to the cache directory
   colors = {}, -- Override default colors by specifying colors for 'onelight' or 'onedark' themes
@@ -65,7 +63,7 @@ require("onedarkpro").setup({
   }
 })
 
-local colorscheme = "onedarkpro" -- nord | catppuccin-frappe | darkplus | onedarkpro
+local colorscheme = "onedark" -- nord | catppuccin-frappe | darkplus | onedarkpro
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
