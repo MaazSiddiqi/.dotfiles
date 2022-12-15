@@ -1,6 +1,7 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
--- default keymaps :help nvim-tree-default-mappings
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1-- default keymaps :help nvim-tree-default-mappings
 vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",
@@ -92,7 +93,7 @@ nvim_tree.setup {
     args = {},
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
     custom = {},
   },
   git = {
