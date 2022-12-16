@@ -20,7 +20,7 @@ vim.g.maplocalleader = " "
 
 
 -- NORMAL --
-keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>", opts)
+keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>:echo \"successfully sourced VIMRC\"<CR><CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -76,7 +76,6 @@ keymap("n", "<leader>;", "<cmd>bd<CR>", opts)
 
 -- Extensions
 keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", opts)
-keymap("n", ";", "<cmd>Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>p", "<cmd>Telescope registers<cr>", opts)
 keymap("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
@@ -90,7 +89,7 @@ keymap("n", "<leader>gk", "<cmd>Gitsigns prev_hunk<cr>", opts)
 keymap("n", "<leader>gi", "<cmd>Gitsigns preview_hunk<cr>", opts)
 keymap("n", "<leader>gI", "<cmd>Gitsigns preview_hunk_inline<cr>", opts)
 keymap("n", "<leader>gw", "<cmd>Gitsigns stage_hunk<cr>", opts)
-keymap("n", "<leader>gw", "<cmd>Gitsigns stage_buffer<cr>", opts)
+keymap("n", "<leader>gW", "<cmd>Gitsigns stage_buffer<cr>", opts)
 keymap("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<cr>", opts)
 keymap("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", opts)
 keymap("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<cr>", opts)
