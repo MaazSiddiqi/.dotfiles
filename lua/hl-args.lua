@@ -11,7 +11,7 @@ require('hlargs').setup {
   extras = {
     named_parameters = false,
   },
-  hl_priority = 10000,
+  hl_priority = 5000,
   excluded_argnames = {
     declarations = {},
     usages = {
