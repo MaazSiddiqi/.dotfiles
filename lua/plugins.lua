@@ -82,12 +82,12 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to -- use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-	use("jose-elias-alvarez/nvim-lsp-ts-utils")
-	-- use("github/copilot.vim") -- Github Copilot.
-	use({
-		"zbirenbaum/copilot.lua",
-		event = "VimEnter",
-	})
+	use("jose-elias-alvarez/typescript.nvim") -- for formatters and linters
+	use("github/copilot.vim") -- Github Copilot.
+	-- use({
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	event = "VimEnter",
+	-- })
 	use("williamboman/mason.nvim") -- simple to use language server installer
 	use("williamboman/mason-lspconfig.nvim")
 
@@ -98,6 +98,8 @@ return require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
+	use("rafamadriz/friendly-snippets")
+
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
