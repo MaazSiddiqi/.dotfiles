@@ -1,15 +1,3 @@
-local opts = { noremap = true, silent = true }
-
---[[ local term_opts = { silent = true } ]]
-
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-
---Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -18,6 +6,15 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+--Remap space as leader key
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- NORMAL --
 keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>:echo \"successfully sourced VIMRC\"<CR><CR>", opts)
