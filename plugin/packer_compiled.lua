@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["hlargs.nvim"] = {
     loaded = true,
     path = "/Users/maaz/.local/share/nvim/site/pack/packer/start/hlargs.nvim",

@@ -6,7 +6,8 @@ local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
 	PACKER_BOOTSTRAP = fn.system({
 		"git",
-		"clone", "--depth",
+		"clone",
+		"--depth",
 		"1",
 		"https://github.com/wbthomason/packer.nvim",
 		install_path,
@@ -100,7 +101,6 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use("rafamadriz/friendly-snippets")
 
-
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch onippets to -- use
@@ -143,8 +143,8 @@ return require("packer").startup(function(use)
 	-- Utilities
 	use({
 		"kylechui/nvim-surround",
-		tag = "*", -- Use for stability; omit to -- use `main` branch for the latest features
 	})
+	use({ "ThePrimeagen/harpoon" })
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 	use("folke/zen-mode.nvim")
 	use("folke/twilight.nvim")
@@ -156,6 +156,7 @@ return require("packer").startup(function(use)
 	use({
 		"windwp/nvim-autopairs",
 	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	---@diagnostic disable-next-line: undefined-global

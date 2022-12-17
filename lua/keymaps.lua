@@ -78,6 +78,15 @@ keymap("n", "<leader>p", "<cmd>Telescope registers<cr>", opts)
 keymap("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
+keymap("n", "<leader>ai", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>", opts)
+keymap("n", "<leader>aa", ":lua require(\"harpoon.mark\").add_file()<CR>", opts)
+keymap("n", "<leader>aj", ":lua require(\"harpoon.ui\").nav_file(1)<CR>", opts)
+keymap("n", "<leader>ak", ":lua require(\"harpoon.ui\").nav_file(2)<CR>", opts)
+keymap("n", "<leader>al", ":lua require(\"harpoon.ui\").nav_file(3)<CR>", opts)
+keymap("n", "<leader>a;", ":lua require(\"harpoon.ui\").nav_file(4)<CR>", opts)
+keymap("n", "<leader>an", ":lua require(\"harpoon.ui\").nav_next()<CR>", opts)
+keymap("n", "<leader>ap", ":lua require(\"harpoon.ui\").nav_prev()<CR>", opts)
+
 keymap("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<cr>", opts)
 keymap("n", "<leader>E", "<cmd>NvimTreeToggle<cr>", opts)
 
