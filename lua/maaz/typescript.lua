@@ -1,6 +1,6 @@
 local opts = {
-	on_attach = require("lsp.handlers").on_attach,
-	capabilities = require("lsp.handlers").capabilities,
+	on_attach = require("maaz.lsp.handlers").on_attach,
+	capabilities = require("maaz.lsp.handlers").capabilities,
 }
 local has_custom_opts, server_custom_opts = pcall(require, "lsp.settings.tsserver")
 if has_custom_opts then
