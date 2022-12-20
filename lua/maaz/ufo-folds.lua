@@ -43,8 +43,7 @@ local function selectProviderWithChainByDefault()
 		end
 
 		return require("ufo")
-			.getFolds(bufnr, "lsp")
-			:catch(function(err)
+			.getFolds(bufnr, "lsp") :catch(function(err)
 				return handleFallbackException(err, "treesitter")
 			end)
 			:catch(function(err)
@@ -117,7 +116,7 @@ local function applyFoldsAndThenCloseAllFolds(providerName)
 		-- make sure buffer is attached
 		require("ufo").attach(bufnr)
 		-- getFolds return Promise if providerName == 'lsp'
-		local ranges = await(require("ufo").getFolds(bufnr, providerName))
+		local ranges = (require("ufo").getFolds(bufnr, providerName))
 		local ok = require("ufo").applyFolds(bufnr, ranges)
 		if ok then
 			require("ufo").closeAllFolds()

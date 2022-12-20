@@ -90,6 +90,7 @@ keymap("n", "<leader>ap", ":lua require(\"harpoon.ui\").nav_prev()<CR>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<cr>", opts)
 keymap("n", "<leader>E", "<cmd>NvimTreeToggle<cr>", opts)
 
+keymap("n", "<leader>go", "<cmd>Octo actions<cr>", opts)
 keymap("n", "<leader>gj", "<cmd>Gitsigns next_hunk<cr>", opts)
 keymap("n", "<leader>gk", "<cmd>Gitsigns prev_hunk<cr>", opts)
 keymap("n", "<leader>gi", "<cmd>Gitsigns preview_hunk<cr>", opts)
