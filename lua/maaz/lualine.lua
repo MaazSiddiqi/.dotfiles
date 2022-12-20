@@ -1,3 +1,4 @@
+---@diagnostic disable: unused-local, unused-function
 local colors = require("onedarkpro").get_colors()
 local config = require("onedarkpro.config").config
 
@@ -94,7 +95,7 @@ require("lualine").setup({
 		lualine_a = { "mode" },
 		lualine_b = {
 			"branch",
-			{ "filename", file_status = false, path = 1, shorting_target = 30 },
+			{ "filename", file_status = false, path = 1, shorting_target = 10 },
 			{
 				"%r",
 				cond = function()
@@ -102,24 +103,6 @@ require("lualine").setup({
 				end,
 			},
 			"diff",
-			{
-				"diagnostics",
-				source = { "nvim" },
-				sections = { "error" },
-				diagnostics_color = { error = { bg = colors.red, fg = colors.black } },
-			},
-			{
-				"diagnostics",
-				source = { "nvim" },
-				sections = { "warn" },
-				diagnostics_color = { warn = { bg = colors.orange, fg = colors.black } },
-			},
-			{
-				"diagnostics",
-				source = { "nvim" },
-				sections = { "hint" },
-				diagnostics_color = { warn = { bg = colors.blue, fg = colors.black } },
-			},
 			{ modified, color = { bg = colors.red, fg = colors.black } },
 			{
 				"%w",
@@ -136,7 +119,27 @@ require("lualine").setup({
 		},
 		lualine_c = {},
 		lualine_x = {},
-		lualine_y = { search_result, "filetype" },
+		lualine_y = {
+			{
+				"diagnostics",
+				source = { "nvim" },
+				sections = { "hint" },
+				diagnostics_color = { warn = { bg = colors.blue, fg = colors.black } },
+			},
+			{
+				"diagnostics",
+				source = { "nvim" },
+				sections = { "warn" },
+				diagnostics_color = { warn = { bg = colors.orange, fg = colors.black } },
+			},
+			{
+				"diagnostics",
+				source = { "nvim" },
+				sections = { "error" },
+				diagnostics_color = { error = { bg = colors.red, fg = colors.black } },
+			},
+			"filetype",
+		},
 		lualine_z = { "%l:%c", "%p%%/%L" },
 	}),
 	inactive_sections = {
