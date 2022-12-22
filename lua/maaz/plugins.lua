@@ -134,9 +134,6 @@ return require("packer").startup(function(use)
 			"nvim-telescope/telescope.nvim",
 			"kyazdani42/nvim-web-devicons",
 		},
-		config = function()
-			require("octo").setup()
-		end,
 	})
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 	use({ "kdheepak/lazygit.nvim" })
@@ -157,7 +154,7 @@ return require("packer").startup(function(use)
 	use({
 		"windwp/nvim-autopairs",
 	})
-
+	use({ "lukas-reineke/indent-blankline.nvim" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	---@diagnostic disable-next-line: undefined-global
