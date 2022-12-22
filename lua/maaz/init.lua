@@ -16,7 +16,6 @@ require("maaz.colorscheme")
 
 -- plugins configs
 require("maaz.lsp")
--- require("maaz.copilot")
 require("maaz.cmp")
 require("maaz.treesitter")
 require("maaz.lualine")

@@ -139,6 +139,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+	use({ "kdheepak/lazygit.nvim" })
 
 	-- Utilities
 	use({

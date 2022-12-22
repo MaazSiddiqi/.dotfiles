@@ -17,7 +17,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- NORMAL --
-keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>:echo \"successfully sourced VIMRC\"<CR><CR>", opts)
+keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>:echo \"successfully sourced VIMRC\"<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -90,6 +90,7 @@ keymap("n", "<leader>ap", ":lua require(\"harpoon.ui\").nav_prev()<CR>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<cr>", opts)
 keymap("n", "<leader>E", "<cmd>NvimTreeToggle<cr>", opts)
 
+keymap("n", "<leader>G", "<cmd>LazyGit<cr>", opts)
 keymap("n", "<leader>go", "<cmd>Octo actions<cr>", opts)
 keymap("n", "<leader>gj", "<cmd>Gitsigns next_hunk<cr>", opts)
 keymap("n", "<leader>gk", "<cmd>Gitsigns prev_hunk<cr>", opts)
