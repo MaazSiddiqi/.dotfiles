@@ -6,7 +6,6 @@
 --   term_mode = "t",
 --   command_mode = "c",
 
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -17,7 +16,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- NORMAL --
-keymap("n", "<leader><leader>R", ":so $MYVIMRC<CR>:echo \"successfully sourced VIMRC\"<CR>", opts)
+keymap("n", "<leader><leader>R", ':so $MYVIMRC<CR>:echo "successfully sourced VIMRC"<CR>', opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -69,23 +68,25 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 keymap("n", "<leader>;", "<cmd>bd<CR>", opts)
-
+keymap("n", "<leader><leader>;", "<cmd>w|%bd|e#|bd#|normal`\"<CR><CR>", opts)
 
 -- Extensions
 keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>F", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>p", "<cmd>Telescope registers<cr>", opts)
-keymap("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>:", "<cmd>Telescope oldfiles<cr>", opts)
+keymap("n", "<leader>L", "<cmd>Telescope diagnostics<cr>", opts)
+-- keymap("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
 
-keymap("n", "<leader>ai", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>", opts)
-keymap("n", "<leader>aa", ":lua require(\"harpoon.mark\").add_file()<CR>", opts)
-keymap("n", "<leader>aj", ":lua require(\"harpoon.ui\").nav_file(1)<CR>", opts)
-keymap("n", "<leader>ak", ":lua require(\"harpoon.ui\").nav_file(2)<CR>", opts)
-keymap("n", "<leader>al", ":lua require(\"harpoon.ui\").nav_file(3)<CR>", opts)
-keymap("n", "<leader>a;", ":lua require(\"harpoon.ui\").nav_file(4)<CR>", opts)
-keymap("n", "<leader>an", ":lua require(\"harpoon.ui\").nav_next()<CR>", opts)
-keymap("n", "<leader>ap", ":lua require(\"harpoon.ui\").nav_prev()<CR>", opts)
+keymap("n", "<leader>ai", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+keymap("n", "<leader>aa", ':lua require("harpoon.mark").add_file()<CR>', opts)
+keymap("n", "<leader>aj", ':lua require("harpoon.ui").nav_file(1)<CR>', opts)
+keymap("n", "<leader>ak", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
+keymap("n", "<leader>al", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
+keymap("n", "<leader>a;", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+keymap("n", "<leader>an", ':lua require("harpoon.ui").nav_next()<CR>', opts)
+keymap("n", "<leader>ap", ':lua require("harpoon.ui").nav_prev()<CR>', opts)
 
 keymap("n", "<leader>e", "<cmd>NvimTreeFindFileToggle<cr>", opts)
 keymap("n", "<leader>E", "<cmd>NvimTreeToggle<cr>", opts)

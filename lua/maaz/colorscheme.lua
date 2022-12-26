@@ -52,7 +52,7 @@ require("onedarkpro").setup({
   },
   options = {
     bold = false, -- Use bold styles?
-    italic = false, -- Use italic styles?
+    italic = true, -- Use italic styles?
     underline = true, -- Use underline styles?
     undercurl = true, -- Use undercurl styles?
 
