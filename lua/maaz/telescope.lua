@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 local actions = require("telescope.actions")
+local layout = require("telescope.actions.layout")
 telescope.setup({
 	defaults = {
 		-- Default configuration for telescope goes here:
@@ -137,6 +138,7 @@ telescope.setup({
 				["<PageDown>"] = actions.results_scrolling_down,
 
 				["?"] = actions.which_key,
+				["p"] = layout.toggle_preview,
 			},
 		},
 	},
@@ -180,4 +182,4 @@ telescope.setup({
 })
 
 require("telescope").load_extension("ui-select")
-require('telescope').load_extension('fzf')
+require("telescope").load_extension("fzf")
