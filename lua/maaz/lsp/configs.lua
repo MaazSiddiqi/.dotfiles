@@ -5,7 +5,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua" } -- tsserver configured through typescript.lua
+local servers = { "jsonls", "sumneko_lua", "emmet_ls" } -- "tsserver" configured through typescript.lua
 
 lsp_installer.setup({
 	ensure_installed = servers,
