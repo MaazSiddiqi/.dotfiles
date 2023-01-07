@@ -28,10 +28,11 @@ null_ls.setup({
 		formatting.prettierd.with({ extra_args = {} }),
 		formatting.prismaFmt,
 		formatting.stylua,
+
 		diagnostics.eslint_d,
-		code_actions.eslint_d,
-		code_actions.gitsigns,
 
 		require("typescript.extensions.null-ls.code-actions"),
+		code_actions.eslint_d,
+		code_actions.gitsigns,
 	},
 })
