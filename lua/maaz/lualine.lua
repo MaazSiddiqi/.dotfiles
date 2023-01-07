@@ -1,6 +1,6 @@
 ---@diagnostic disable: unused-local, unused-function
 local lualine = require("lualine")
-local colors = require("onedarkpro").get_colors()
+local colors = require("onedarkpro.helpers").get_colors()
 local config = require("onedarkpro.config").config
 
 local onedarkpro = {}
