@@ -68,7 +68,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 keymap("n", "<leader>;", "<cmd>bd<CR>", opts)
-keymap("n", "<leader><leader>;", "<cmd>w|%bd|e#|bd#|normal`\"<CR><CR>", opts)
+keymap("n", "<leader><leader>;", "<cmd>w|%bd|e#|bd!#|normal`\"<CR><CR>", opts)
 
 -- Extensions
 keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", opts)
@@ -77,6 +77,7 @@ keymap("n", "<leader>p", "<cmd>Telescope registers<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>:", "<cmd>Telescope oldfiles<cr>", opts)
 keymap("n", "<leader>L", "<cmd>Telescope diagnostics<cr>", opts)
+keymap("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
 -- keymap("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
 
 keymap("n", "<leader>ai", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
