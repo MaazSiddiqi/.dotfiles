@@ -108,6 +108,7 @@ telescope.setup({
 
 			n = {
 				["h"] = actions.close,
+				["q"] = actions.close,
 				["<esc>"] = actions.close,
 
 				["l"] = actions.select_default,
