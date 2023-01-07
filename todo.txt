@@ -1,0 +1,43 @@
+INTERESTING PLUGINS:
+
+
+https://github.com/andrewferrier/textobj-diagnostic.nvim - motion and textobject for navigating diagnostics 
+https://github.com/RRethy/nvim-treesitter-textsubjects - balance in/out of code scopes
+https://github.com/jose-elias-alvarez/typescript.nvim - typescript
+https://github.com/kosayoda/nvim-lightbulb - visual lightbulb if code action availablie
+https://github.com/RishabhRD/nvim-lsputils - better ui for lsp
+https://github.com/weilbith/nvim-code-action-menu - alternative code action floating window
+https://github.com/ray-x/lsp_signature.nvim - shows signature help when calling functions + virtual text help for next params
+https://github.com/rmagatti/goto-preview - floating previews windows
+https://github.com/ldelossa/litee.nvim - comprehensive code outline tool
+https://github.com/lukas-reineke/cmp-under-comparator - better lsp sorting
+https://github.com/ThePrimeagen/harpoon - harpoon for better marks and inter-file navigation
+https://github.com/brenoprata10/nvim-highlight-colors - color highlights (useful for tailwind)
+https://github.com/nvim-colortils/colortils.nvim - nice color picking in nvim
+https://github.com/kdheepak/lazygit.nvim - lazygit in nvim
+https://github.com/pwntester/octo.nvim - work with git prs in nvim
+https://github.com/ldelossa/gh.nvim - fully featured gh integration in nvim, powered by litee
+
+https://github.com/simrat39/symbols-outline.nvim - symbols outline navigation
+https://github.com/folke/trouble.nvim - neat list of file diagnostics
+https://github.com/nacro90/numb.nvim - live preview when using ':{number}'
+https://github.com/saifulapm/chartoggle.nvim - toggle EOL chars (';', ',')
+https://github.com/declancm/cinnamon.nvim - smooth editor scrolling
+https://github.com/ZhiyuanLck/smart-pairs - smarter autoformatting with pairs 
+https://github.com/Kasama/nvim-custom-diagnostic-highlight - custome diagnostic text highliting
+https://github.com/smjonas/inc-rename.nvim - live lsp rename
+https://github.com/j-hui/fidget.nvim - lsp progress mini visual
+https://github.com/ray-x/navigator.lua - alternative code lsp navigation plugin
+
+https://github.com/stevearc/dressing.nvim - modern nvim ui replacments
+https://github.com/folke/lsp-colors.nvim - auto-create lsp diag colors if colorscheme doesn't have one
+https://github.com/ray-x/sad.nvim - alternative cross-file rename
+https://github.com/karb94/neoscroll.nvim - another smooth scrolling alternative
+https://github.com/stevearc/aerial.nvim - alternative code outline plugin
+https://github.com/rest-nvim/rest.nvim - rest client in nvim
+https://github.com/marko-cerovac/material.nvim - colorscheme (palenight looks cool)
+https://github.com/sainnhe/edge - rlly clean colorscheme
+
+
+ISSUES
+https://git.sr.ht/~whynothugo/lsp_lines.nvim - cleaner virtual diagnostics
