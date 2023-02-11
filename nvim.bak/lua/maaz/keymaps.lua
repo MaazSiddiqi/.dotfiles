@@ -68,7 +68,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 keymap("n", "<leader>;", "<cmd>bd<CR>", opts)
-keymap("n", "<leader><leader>;", "<cmd>w|%bd|e#|bd!#|normal`\"<CR><CR>", opts)
+keymap("n", "<leader><leader>;", '<cmd>w|%bd|e#|bd!#|normal`"<CR><CR>', opts)
 
 -- Extensions
 keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", opts)
