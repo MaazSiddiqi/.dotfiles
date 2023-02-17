@@ -13,13 +13,9 @@ require("lazy").setup({
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+
     -- import/override with your plugins
     { import = "plugins" },
-
-    { "echasnovski/mini.surround", enabled = false },
-    { "ggandor/leap.nvim", enabled = false },
-    { "ggandor/flit.nvim", enabled = false },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

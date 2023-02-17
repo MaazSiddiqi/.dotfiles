@@ -8,20 +8,17 @@ return {
         i = cmp.mapping.abort(),
         c = cmp.mapping.close(),
       }),
-      ["<C-j>"] = cmp.mapping(function(fallback)
+      ["<C-j>"] = cmp.mapping(function()
         if not cmp.visible() then
           cmp.complete()
-        elseif cmp.visible() then
-          cmp.select_next_item()
         else
-          fallback()
+          cmp.mapping.select_next_item()
         end
       end),
       ["<C-k>"] = cmp.mapping.select_prev_item(),
       ["<C-l>"] = cmp.mapping.confirm({ select = true }),
 
-      ["<C-Space>"] = cmp.mapping.complete(),
-      ["<CR>"] = cmp.mapping.complete_common_string(),
+      ["<C-Space>"] = cmp.mapping.complete_common_string(),
 
       ["<C-b>"] = cmp.mapping.scroll_docs(-4),
       ["<C-f>"] = cmp.mapping.scroll_docs(4),

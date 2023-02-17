@@ -16,8 +16,8 @@ return {
         theme = "auto",
         globalstatus = true,
         disabled_filetypes = { statusline = { "dashboard", "lazy", "alpha" } },
-        section_separators = { left = "", right = "" },
-        component_seperators = { left = "", right = "" },
+        component_separators = "",
+        section_separators = { left = "", right = "" },
       },
       sections = {
         lualine_a = { "mode" },
@@ -25,25 +25,16 @@ return {
         lualine_c = {
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
           { "filename", path = 1, symbols = { modified = "+", readonly = "-", unnamed = "" } },
-          -- stylua: ignore
-          -- {
-          --   function() return require("nvim-navic").get_location() end,
-          --   cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
-          -- },
+          {
+            "diff",
+            symbols = {
+              added = icons.git.added,
+              modified = icons.git.modified,
+              removed = icons.git.removed,
+            },
+          },
         },
         lualine_x = {
-          -- stylua: ignore
-          -- {
-          --   function() return require("noice").api.status.command.get() end,
-          --   cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-          --   color = fg("Statement")
-          -- },
-          -- -- stylua: ignore
-          -- {
-          --   function() return require("noice").api.status.mode.get() end,
-          --   cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-          --   color = fg("Constant") ,
-          -- },
           { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = fg("Special") },
           {
             "diagnostics",

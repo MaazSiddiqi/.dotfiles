@@ -89,42 +89,57 @@ return {
       require("telescope").load_extension("fzf")
     end,
   },
+
   keys = function()
     return {
-      { "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
+      { "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find Files (cwd)" },
+
       { "<leader>/", Util.telescope("live_grep"), desc = "Find in Files (Grep)" },
-      -- find
-      -- { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-      { "<C-f>", Util.telescope("files"), desc = "Find Files (root dir)" },
-      { "<leader>f", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
       { "<leader>:", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
-      -- git
-      -- { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
-      -- { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
       -- search
       { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
       { "<leader>sd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
       { "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages" },
       { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
-      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
-      {
-        "<leader>ss",
-        Util.telescope("lsp_document_symbols", {
-          symbols = {
-            "Class",
-            "Function",
-            "Method",
-            "Constructor",
-            "Interface",
-            "Module",
-            "Struct",
-            "Trait",
-            "Field",
-            "Property",
-          },
-        }),
-        desc = "Goto Symbol",
-      },
+      { "<leader>uc", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
     }
   end,
+
+  opts = {
+    defaults = {
+      vimgrep_arguments = {
+        "rg",
+        "-L",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+      },
+      prompt_prefix = "   ",
+      selection_caret = "  ",
+      entry_prefix = "  ",
+      initial_mode = "insert",
+      selection_strategy = "reset",
+      sorting_strategy = "ascending",
+      layout_strategy = "horizontal",
+      layout_config = {
+        horizontal = {
+          prompt_position = "top",
+          preview_width = 0.55,
+          results_width = 0.8,
+        },
+        vertical = {
+          mirror = false,
+        },
+        width = 0.87,
+        height = 0.80,
+        preview_cutoff = 120,
+      },
+      border = {},
+      borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+    },
+    extensions_list = { "themes", "terms" },
+  },
 }
