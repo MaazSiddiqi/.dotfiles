@@ -8,13 +8,16 @@ return {
         i = cmp.mapping.abort(),
         c = cmp.mapping.close(),
       }),
-      ["<C-j>"] = cmp.mapping(function()
+      ["<C-j>"] = cmp.mapping(function(fallback)
         if not cmp.visible() then
           cmp.complete()
+        elseif cmp.visible() then
+          cmp.select_next_item()
         else
-          cmp.mapping.select_next_item()
+          fallback()
         end
       end),
+
       ["<C-k>"] = cmp.mapping.select_prev_item(),
       ["<C-l>"] = cmp.mapping.confirm({ select = true }),
 
