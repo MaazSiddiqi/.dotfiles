@@ -20,6 +20,7 @@ return {
 
       ["<C-k>"] = cmp.mapping.select_prev_item(),
       ["<C-l>"] = cmp.mapping.confirm({ select = true }),
+      ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
       ["<C-Space>"] = cmp.mapping.complete_common_string(),
 
