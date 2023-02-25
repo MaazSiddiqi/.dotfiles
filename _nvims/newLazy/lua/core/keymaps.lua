@@ -218,9 +218,9 @@ map("n", "<leader><leader>;", '<cmd>w|%bd|e#|bd!#|normal`"<CR><CR>', { silent = 
 map("n", "Y", "y$", { silent = true })
 --
 -- lazygit
-map("n", "<leader>G", function()
-	Util.float_term({ "lazygit" })
-end, { desc = "Open LazyGit" })
+-- map("n", "<leader>G", function()
+-- 	Util.float_term({ "lazygit" })
+-- end, { desc = "Open LazyGit" })
 -- lazy
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "LSP buffer info" })
