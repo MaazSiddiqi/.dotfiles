@@ -1,1 +1,108 @@
-return {}
+function has(plugin)
+  return require("lazy.core.config").plugins[plugin] ~= nil
+end
+
+local function map(mode, lhs, rhs, opts)
+    opts = opts or {}
+    opts.silent = opts.silent ~= false
+    vim.keymap.set(mode, lhs, rhs, opts)
+end
+
+-- better up/down
+map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+
+-- Move to window using the <ctrl> hjkl keys
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
+
+-- Resize window using <ctrl> arrow keys
+map("n", "<C-Up>", "<cmd>resize +2<cr>")
+map("n", "<C-Down>", "<cmd>resize -2<cr>")
+map("n", "<C-Left>", "<cmd>vertical resize -2<cr>")
+map("n", "<C-Right>", "<cmd>vertical resize +2<cr>")
+
+-- Move Lines
+map("n", "<A-j>", "<cmd>m .+1<cr>==")
+map("n", "<A-k>", "<cmd>m .-2<cr>==")
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi")
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi")
+map("v", "<A-j>", ":m '>+1<cr>gv=gv")
+map("v", "<A-k>", ":m '<-2<cr>gv=gv")
+
+-- buffers
+if has("bufferline.nvim") then
+  map("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>")
+  map("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>")
+  map("n", "[b", "<cmd>BufferLineCyclePrev<cr>")
+  map("n", "]b", "<cmd>BufferLineCycleNext<cr>")
+else
+  map("n", "<S-h>", "<cmd>bprevious<cr>")
+  map("n", "<S-l>", "<cmd>bnext<cr>")
+  map("n", "[b", "<cmd>bprevious<cr>")
+  map("n", "]b", "<cmd>bnext<cr>")
+end
+
+-- Clear search with <esc>
+map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>")
+
+-- Clear search, diff update and redraw
+-- taken from runtime/lua/_editor.lua
+map(
+  "n",
+  "<leader>ur",
+  "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>"
+)
+
+map({ "n", "x" }, "gw", "*N")
+
+-- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+map("n", "n", "'Nn'[v:searchforward]", { expr = true })
+map("x", "n", "'Nn'[v:searchforward]", { expr = true })
+map("o", "n", "'Nn'[v:searchforward]", { expr = true })
+map("n", "N", "'nN'[v:searchforward]", { expr = true })
+map("x", "N", "'nN'[v:searchforward]", { expr = true })
+map("o", "N", "'nN'[v:searchforward]", { expr = true })
+
+-- Add undo break-points
+map("i", ",", ",<c-g>u")
+map("i", ".", ".<c-g>u")
+map("i", ";", ";<c-g>u")
+
+-- better indenting
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
+-- lazy
+map("n", "<leader>L", "<cmd>:Lazy<cr>")
+
+map("n", "<leader>xl", "<cmd>lopen<cr>")
+map("n", "<leader>xq", "<cmd>copen<cr>")
+
+if not has("trouble.nvim") then
+  map("n", "[q", vim.cmd.cprev)
+  map("n", "]q", vim.cmd.cnext)
+end
+
+-- highlights under cursor
+if vim.fn.has("nvim-0.9.0") == 1 then
+  map("n", "<leader>ui", vim.show_pos)
+end
+
+-- windows
+map("n", "<leader>ww", "<C-W>p")
+map("n", "<leader>wd", "<C-W>c")
+map("n", "<leader>w-", "<C-W>s")
+map("n", "<leader>w|", "<C-W>v")
+map("n", "<leader>-", "<C-W>s")
+map("n", "<leader>|", "<C-W>v")
+
+-- tabs
+map("n", "<leader><tab>l", "<cmd>tablast<cr>")
+map("n", "<leader><tab>f", "<cmd>tabfirst<cr>")
+map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>")
+map("n", "<leader><tab>]", "<cmd>tabnext<cr>")
+map("n", "<leader><tab>d", "<cmd>tabclose<cr>")
+map("n", "<leader><tab>[", "<cmd>tabprevious<cr>")
