@@ -26,5 +26,3 @@ require("lazy").setup({
     colorscheme = {"catpuccin"},
   }
 })
-
-vim.cmd.colorscheme("catppuccin")
