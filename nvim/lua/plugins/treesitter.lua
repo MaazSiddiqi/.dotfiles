@@ -1,3 +1,4 @@
+-- @see https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/treesitter.lua
 return {
   {
     "nvim-treesitter/nvim-treesitter",
