@@ -28,8 +28,9 @@ return {
       },
     },
     keys = {
-      { "<c-space>", desc = "Increment selection" },
-      { "<bs>", desc = "Decrement selection", mode = "x" },
+      { "<leader>v", desc = "Init Increment selection" },
+      { "v",         desc = "Increment selection" },
+      { "V",         desc = "Decrement selection",         mode = "x" },
     },
     ---@type TSConfig
     opts = {
@@ -60,10 +61,10 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
+          init_selection = "<leader>v",
+          node_incremental = "v",
           scope_incremental = false,
-          node_decremental = "<bs>",
+          node_decremental = "V",
         },
       },
     },
@@ -78,6 +79,7 @@ return {
           end
           added[lang] = true
           return true
+          ---@diagnostic disable-next-line: param-type-mismatch
         end, opts.ensure_installed)
       end
       require("nvim-treesitter.configs").setup(opts)
