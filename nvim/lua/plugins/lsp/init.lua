@@ -68,8 +68,6 @@ return {
     },
     ---@param opts PluginLspOpts
     config = function(_, opts)
-      function keymaps_on_attach() end
-
       -- setup formatting and keymaps
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)

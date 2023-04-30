@@ -6,28 +6,32 @@ M._keys = nil
 ---@return (LazyKeys|{has?:string})[]
 function M.get()
   if not M._keys then
-  ---@class PluginLspKeys
+    ---@class PluginLspKeys
     -- stylua: ignore
-    M._keys =  {
-      { "<leader>cd", vim.diagnostic.open_float, desc = "Line Diagnostics" },
-      { "<leader>cl", "<cmd>LspInfo<cr>", desc = "Lsp Info" },
-      { "gd", "<cmd>Telescope lsp_definitions<cr>", desc = "Goto Definition", has = "definition" },
-      { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
-      { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
-      { "gI", "<cmd>Telescope lsp_implementations<cr>", desc = "Goto Implementation" },
-      { "gy", "<cmd>Telescope lsp_type_definitions<cr>", desc = "Goto T[y]pe Definition" },
-      { "K", vim.lsp.buf.hover, desc = "Hover" },
-      { "gK", vim.lsp.buf.signature_help, desc = "Signature Help", has = "signatureHelp" },
-      { "<c-k>", vim.lsp.buf.signature_help, mode = "i", desc = "Signature Help", has = "signatureHelp" },
-      { "]d", M.diagnostic_goto(true), desc = "Next Diagnostic" },
-      { "[d", M.diagnostic_goto(false), desc = "Prev Diagnostic" },
-      { "]e", M.diagnostic_goto(true, "ERROR"), desc = "Next Error" },
-      { "[e", M.diagnostic_goto(false, "ERROR"), desc = "Prev Error" },
-      { "]w", M.diagnostic_goto(true, "WARN"), desc = "Next Warning" },
-      { "[w", M.diagnostic_goto(false, "WARN"), desc = "Prev Warning" },
-      { "<leader>cf", format, desc = "Format Document", has = "documentFormatting" },
-      { "<leader>cf", format, desc = "Format Range", mode = "v", has = "documentRangeFormatting" },
-      { "<leader>ca", vim.lsp.buf.code_action, desc = "Code Action", mode = { "n", "v" }, has = "codeAction" },
+    M._keys = {
+      { "<leader>ld", vim.diagnostic.open_float,                 desc = "Line Diagnostics" },
+      { "<leader>lI", "<cmd>LspInfo<cr>",                        desc = "Lsp Info" },
+      { "<leader>d",  vim.lsp.buf.definition,                    desc = "Goto Definition",       has = "definition" },
+      { "<leader>lr", vim.lsp.buf.references,                    desc = "References" },
+      { "gd",         vim.lsp.buf.declaration,                   desc = "Goto Declaration" },
+      { "<leader>li", "<cmd>Telescope lsp_implementations<cr>",  desc = "Goto Implementation" },
+      { "<leader>D",  "<cmd>Telescope lsp_type_definitions<cr>", desc = "Goto T[y]pe Definition" },
+      { "K",          vim.lsp.buf.hover,                         desc = "Hover" },
+      { "gK",         vim.lsp.buf.signature_help,                desc = "Signature Help",        has = "signatureHelp" },
+      { "<c-k>",      vim.lsp.buf.signature_help,                mode = "i",                     desc = "Signature Help",
+                                                                                                                              has =
+        "signatureHelp" },
+      { "]d",         M.diagnostic_goto(true),                   desc = "Next Diagnostic" },
+      { "[d",         M.diagnostic_goto(false),                  desc = "Prev Diagnostic" },
+      { "]e",         M.diagnostic_goto(true, "ERROR"),          desc = "Next Error" },
+      { "[e",         M.diagnostic_goto(false, "ERROR"),         desc = "Prev Error" },
+      { "]w",         M.diagnostic_goto(true, "WARN"),           desc = "Next Warning" },
+      { "[w",         M.diagnostic_goto(false, "WARN"),          desc = "Prev Warning" },
+      { "<leader>lf", vim.lsp.buf.format,                        desc = "Format Document",       has =
+      "documentFormatting" },
+      { "<leader>ca", vim.lsp.buf.code_action,                   desc = "Code Action",           mode = { "n", "v" },
+                                                                                                                              has =
+        "codeAction" },
       {
         "<leader>cA",
         function()
@@ -43,7 +47,7 @@ function M.get()
         desc = "Source Action",
         has = "codeAction",
       },
-      { "<leader>cr", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
+      { "<leader>lR", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
     }
   end
   return M._keys
