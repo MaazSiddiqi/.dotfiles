@@ -12,7 +12,7 @@ vim.opt.termguicolors = true
 local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
-opt.clipboard = "unnamedplus" -- Sync with system clipboard
+opt.clipboard = "" -- Sync with system clipboard, "unnamed" | "unnamedplus"
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 3 -- Hide * markup for bold and italic
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
@@ -60,4 +60,3 @@ end
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
-

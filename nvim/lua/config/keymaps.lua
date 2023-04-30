@@ -3,9 +3,9 @@ function has(plugin)
 end
 
 local function map(mode, lhs, rhs, opts)
-    opts = opts or {}
-    opts.silent = opts.silent ~= false
-    vim.keymap.set(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts.silent = opts.silent ~= false
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 map("i", "jk", "<esc>", { silent = true })
@@ -27,12 +27,31 @@ map("n", "<C-Left>", "<cmd>vertical resize -2<cr>")
 map("n", "<C-Right>", "<cmd>vertical resize +2<cr>")
 
 -- Move Lines
-map("n", "<A-j>", "<cmd>m .+1<cr>==")
-map("n", "<A-k>", "<cmd>m .-2<cr>==")
-map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi")
-map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi")
-map("v", "<A-j>", ":m '>+1<cr>gv=gv")
-map("v", "<A-k>", ":m '<-2<cr>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+
+-- theprimeagen's saner behaviour keymaps
+map("n", "J", "mzJ`z")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+
+-- greatest remap ever
+map("x", "<leader>p", [["_dP]])
+-- next greatest remap ever : asbjornHaland
+map({ "n", "v" }, "<leader>y", [["+y]])
+map("n", "<leader>Y", [["+Y]])
+
+map({ "n", "v" }, "<leader>d", [["_d]])
+
+-- Keep cursor at the bottom of the visual selection after you yank it.
+map('v', 'y', 'ygv<Esc>')
+
+-- map("n", "<C-k>", "<cmd>cnext<CR>zz")
+-- map("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- map("n", "<leader>k", "<cmd>lnext<CR>zz")
+-- map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- buffers
 if has("bufferline.nvim") then
@@ -52,11 +71,7 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>")
 
 -- Clear search, diff update and redraw
 -- taken from runtime/lua/_editor.lua
-map(
-  "n",
-  "<leader>ur",
-  "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>"
-)
+map("n", "<leader>ur", "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>")
 
 map({ "n", "x" }, "gw", "*N")
 
