@@ -94,6 +94,7 @@ return {
 
   {
     "numToStr/Comment.nvim",
+    event = "VeryLazy",
     opts = {
       {
         ---Add a space b/w comment and the line
