@@ -161,11 +161,6 @@ return {
     lazy = true,
     init = function()
       vim.g.navic_silence = true
-      -- require("lazyvim.util").on_attach(function(client, buffer)
-      --   if client.server_capabilities.documentSymbolProvider then
-      --     require("nvim-navic").attach(client, buffer)
-      --   end
-      -- end)
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local buffer = args.buf
