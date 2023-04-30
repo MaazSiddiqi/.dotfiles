@@ -2,49 +2,51 @@ return {
   "nvim-tree/nvim-tree.lua",
   lazy = false,
   opts = {
-    icons = {
-      webdev_colors = true,
-      git_placement = "after",
-      modified_placement = "after",
-      padding = " ",
-      symlink_arrow = " ➛ ",
-      show = {
-        file = true,
-        folder = true,
-        folder_arrow = true,
-        git = true,
-        modified = true,
-      },
-      glyphs = {
-        default = "",
-        symlink = "",
-        bookmark = "",
-        modified = "●",
-        folder = {
-          arrow_closed = "",
-          arrow_open = "",
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
-          symlink = "",
-          symlink_open = "",
+    renderer = {
+      icons = {
+        webdev_colors = true,
+        git_placement = "after",
+        modified_placement = "after",
+        padding = " ",
+        symlink_arrow = " ➛ ",
+        show = {
+          file = true,
+          folder = true,
+          folder_arrow = true,
+          git = true,
+          modified = true,
         },
-        git = {
-          -- unstaged = "✗",
-          -- staged = "✓",
-          -- unmerged = "",
-          -- renamed = "➜",
-          -- untracked = "★",
-          -- deleted = "",
-          -- ignored = "◌",
-          unstaged = require("config.icons").git.modified,
-          staged = "✓",
-          unmerged = "",
-          renamed = require("config.icons").git.modified,
-          untracked = require("config.icons").git.added,
-          deleted = require("config.icons").git.added,
-          ignored = "◌",
+        glyphs = {
+          default = "",
+          symlink = "",
+          bookmark = "",
+          modified = "●",
+          folder = {
+            arrow_closed = "",
+            arrow_open = "",
+            default = "",
+            open = "",
+            empty = "",
+            empty_open = "",
+            symlink = "",
+            symlink_open = "",
+          },
+          git = {
+            -- unstaged = "✗",
+            -- staged = "✓",
+            -- unmerged = "",
+            -- renamed = "➜",
+            -- untracked = "★",
+            -- deleted = "",
+            -- ignored = "◌",
+            unstaged = require("config.icons").git.modified,
+            staged = "✓",
+            unmerged = "",
+            renamed = require("config.icons").git.modified,
+            untracked = require("config.icons").git.added,
+            deleted = require("config.icons").git.added,
+            ignored = "◌",
+          },
         },
       },
     },
@@ -86,7 +88,6 @@ return {
       end
 
       api.config.mappings.default_on_attach(bufnr)
-
       vim.keymap.set("n", "l", edit_or_open, opts("Edit Or Open"))
       vim.keymap.set("n", "L", vsplit_preview, opts("Vsplit Preview"))
       vim.keymap.set("n", "h", api.tree.close, opts("Close"))
@@ -95,6 +96,7 @@ return {
   },
   keys = {
     { "<leader>e", "<cmd>NvimTreeToggle<cr>", { silent = true } },
+    { "<leader>E", "<cmd>NvimTreeFindFile<cr>", { silent = true } },
   },
   config = true,
 }
