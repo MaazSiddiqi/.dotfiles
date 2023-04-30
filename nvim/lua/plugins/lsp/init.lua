@@ -4,8 +4,8 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      { "folke/neoconf.nvim", cmd = "Neoconf", config = true },
-      { "folke/neodev.nvim", opts = { experimental = { pathStrict = true } } },
+      { "folke/neoconf.nvim", cmd = "Neoconf",                                config = true },
+      { "folke/neodev.nvim",  opts = { experimental = { pathStrict = true } } },
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
@@ -85,14 +85,14 @@ return {
 
       if type(opts.diagnostics.virtual_text) == "table" and opts.diagnostics.virtual_text.prefix == "icons" then
         opts.diagnostics.virtual_text.prefix = vim.fn.has("nvim-0.10.0") == 0 and "●"
-          or function(diagnostic)
-            local icons = require("config.icons").diagnostics
-            for d, icon in pairs(icons) do
-              if diagnostic.severity == vim.diagnostic.severity[d:upper()] then
-                return icon
+            or function(diagnostic)
+              local icons = require("config.icons").diagnostics
+              for d, icon in pairs(icons) do
+                if diagnostic.severity == vim.diagnostic.severity[d:upper()] then
+                  return icon
+                end
               end
             end
-          end
       end
 
       vim.diagnostic.config(vim.deepcopy(opts.diagnostics))
@@ -147,26 +147,30 @@ return {
         mlsp.setup({ ensure_installed = ensure_installed })
         mlsp.setup_handlers({ setup })
       end
-      function M.lsp_get_config(server)
+      local function lsp_get_config(server)
         local configs = require("lspconfig.configs")
         return rawget(configs, server)
       end
-      
+
       ---@param server string
       ---@param cond fun( root_dir, config): boolean
-      function M.lsp_disable(server, cond)
+      local function lsp_disable(server, cond)
         local util = require("lspconfig.util")
-        local def = M.lsp_get_config(server)
-        def.document_config.on_new_config = util.add_hook_before(def.document_config.on_new_config, function(config, root_dir)
-          if cond(root_dir, config) then
-            config.enabled = false
+        local def = lsp_get_config(server)
+        def.document_config.on_new_config = util.add_hook_before(
+          def.document_config.on_new_config,
+          function(config, root_dir)
+            if cond(root_dir, config) then
+              config.enabled = false
+            end
           end
-        end)
+        )
       end
-      if Util.lsp_get_config("denols") and Util.lsp_get_config("tsserver") then
+
+      if lsp_get_config("denols") and lsp_get_config("tsserver") then
         local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
-        Util.lsp_disable("tsserver", is_deno)
-        Util.lsp_disable("denols", function(root_dir)
+        lsp_disable("tsserver", is_deno)
+        lsp_disable("denols", function(root_dir)
           return not is_deno(root_dir)
         end)
       end
@@ -183,11 +187,13 @@ return {
       return {
         root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile", ".git"),
         sources = {
-          nls.builtins.formatting.fish_indent,
-          nls.builtins.diagnostics.fish,
+          nls.builtins.formatting.prettierd,
+          nls.builtins.formatting.black,
           nls.builtins.formatting.stylua,
           nls.builtins.formatting.shfmt,
-          -- nls.builtins.diagnostics.flake8,
+          nls.builtins.formatting.clang_format,
+
+          nls.builtins.code_actions.eslint_d
         },
       }
     end,
@@ -195,15 +201,26 @@ return {
 
   -- cmdline tools and lsp servers
   {
-
     "williamboman/mason.nvim",
     cmd = "Mason",
     keys = { { "<leader>M", "<cmd>Mason<cr>", desc = "Mason" } },
     opts = {
       ensure_installed = {
-        "stylua",
+        "clang-format",
+        "clangd",
+        "cpplint",
+        "eslint_d",
+        "flake8",
+        "json-lsp",
+        "lua-language-server",
+        "prettierd",
+        "pyright",
+        "rust-analyzer",
+        "selene",
+        "shellcheck",
         "shfmt",
-        -- "flake8",
+        "stylua",
+        "typescript-language-server",
       },
     },
     ---@param opts MasonSettings | {ensure_installed: string[]}
