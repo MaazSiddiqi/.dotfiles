@@ -10,11 +10,11 @@ function M.get()
     -- stylua: ignore
     M._keys = {
       { "<leader>ld", vim.diagnostic.open_float,                 desc = "Line Diagnostics" },
-      { "<leader>lI", "<cmd>LspInfo<cr>",                        desc = "Lsp Info" },
+      { "<leader>li", "<cmd>LspInfo<cr>",                        desc = "Lsp Info" },
       { "<leader>d",  vim.lsp.buf.definition,                    desc = "Goto Definition",       has = "definition" },
       { "<leader>lr", vim.lsp.buf.references,                    desc = "References" },
       { "gd",         vim.lsp.buf.declaration,                   desc = "Goto Declaration" },
-      { "<leader>li", "<cmd>Telescope lsp_implementations<cr>",  desc = "Goto Implementation" },
+      { "<leader>lI", "<cmd>Telescope lsp_implementations<cr>",  desc = "Goto Implementation" },
       { "<leader>D",  "<cmd>Telescope lsp_type_definitions<cr>", desc = "Goto T[y]pe Definition" },
       { "K",          vim.lsp.buf.hover,                         desc = "Hover" },
       { "gK",         vim.lsp.buf.signature_help,                desc = "Signature Help",        has = "signatureHelp" },
@@ -32,6 +32,8 @@ function M.get()
       { "[e", M.diagnostic_goto(false, "ERROR"), desc = "Prev Error" },
       { "]w", M.diagnostic_goto(true, "WARN"),   desc = "Next Warning" },
       { "[w", M.diagnostic_goto(false, "WARN"),  desc = "Prev Warning" },
+      { "]h", M.diagnostic_goto(true, "HINT"),   desc = "Next Hint" },
+      { "[h", M.diagnostic_goto(false, "HINT"),  desc = "Prev Hint" },
       {
         "<leader>lf",
         vim.lsp.buf.format,
