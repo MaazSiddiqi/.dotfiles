@@ -1,3 +1,4 @@
+-- @see https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/treesitter.lua
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -26,39 +27,61 @@ return {
         end,
       },
     },
+    keys = {
+      { "<leader>v", desc = "Init Increment selection" },
+      { "v",         desc = "Increment selection" },
+      { "V",         desc = "Decrement selection",         mode = "x" },
+    },
     ---@type TSConfig
     opts = {
       highlight = { enable = true },
-      indent = { enable = true, disable = { "python" } },
+      indent = { enable = true },
       context_commentstring = { enable = true, enable_autocmd = false },
       ensure_installed = {
         "bash",
-        "help",
+        "c",
         "html",
         "javascript",
         "json",
         "lua",
+        "luadoc",
+        "luap",
         "markdown",
         "markdown_inline",
         "python",
+        "query",
         "regex",
         "tsx",
         "typescript",
         "vim",
+        "vimdoc",
+        "yaml",
         "yaml",
       },
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = "<nop>",
-          node_decremental = "<bs>",
+          init_selection = "<leader>v",
+          node_incremental = "v",
+          scope_incremental = false,
+          node_decremental = "V",
         },
       },
     },
     ---@param opts TSConfig
     config = function(_, opts)
+      if type(opts.ensure_installed) == "table" then
+        ---@type table<string, boolean>
+        local added = {}
+        opts.ensure_installed = vim.tbl_filter(function(lang)
+          if added[lang] then
+            return false
+          end
+          added[lang] = true
+          return true
+          ---@diagnostic disable-next-line: param-type-mismatch
+        end, opts.ensure_installed)
+      end
       require("nvim-treesitter.configs").setup(opts)
     end,
   },
