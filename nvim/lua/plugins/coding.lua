@@ -157,4 +157,15 @@ return {
     opts = {},
     config = true,
   },
+
+  -- Autoclose tags
+  {
+    "windwp/nvim-ts-autotag",
+    event = "VeryLazy",
+    opts = {
+      autotag = {
+        enable = true,
+      },
+    },
+  },
 }
