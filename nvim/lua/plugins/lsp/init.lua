@@ -221,6 +221,7 @@ return {
         "shfmt",
         "stylua",
         "typescript-language-server",
+        "jdts",
       },
     },
     ---@param opts MasonSettings | {ensure_installed: string[]}
