@@ -5,7 +5,7 @@ return {
   opts = { use_diagnostic_signs = true },
   keys= {
     { "<leader>lj", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document Diagnostics (Trouble)" },
-    { "<leader>lh", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Workspace Diagnostics (Trouble)" },
+    { "<leader>lJ", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Workspace Diagnostics (Trouble)" },
     { "<leader>lk", "<cmd>TroubleToggle lsp_references<cr>", desc = "Workspace Diagnostics (Trouble)" },
     { "<leader>ll", "<cmd>TroubleToggle lsp_implementations<cr>", desc = "Workspace Diagnostics (Trouble)" },
     { "<leader>xi", "<cmd>TroubleToggle loclist<cr>", desc = "Location List (Trouble)" },
