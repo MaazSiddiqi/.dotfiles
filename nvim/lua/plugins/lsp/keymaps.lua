@@ -1,12 +1,9 @@
 local M = {}
 
----@type PluginLspKeys
 M._keys = nil
 
----@return (LazyKeys|{has?:string})[]
 function M.get()
   if not M._keys then
-    ---@class PluginLspKeys
     -- stylua: ignore
     M._keys = {
       { "<leader>ld", vim.diagnostic.open_float,                 desc = "Line Diagnostics" },
