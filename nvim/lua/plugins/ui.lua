@@ -23,7 +23,7 @@ return {
     event = "VeryLazy",
     keys = {
       { "<leader>'", "<Cmd>BufferLineTogglePin<CR>",            desc = "Toggle pin" },
-      { "<leader>\"", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
+      { '<leader>"', "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
     },
     opts = {
       options = {
@@ -51,11 +51,10 @@ return {
     },
     config = true,
   },
-
   -- statusline
   {
     "nvim-lualine/lualine.nvim",
-    opts = function(plugin)
+    opts = function()
       -- local icons = require("lazyvim.config").icons
       local icons = require("config.icons")
 
@@ -100,6 +99,18 @@ return {
           },
           lualine_x = {
             { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = fg("Special") },
+            {
+              function()
+                local icon = require("config.icons").kinds.Copilot
+                local status = require("copilot.api").status.data
+                return icon .. (status.message or "")
+              end,
+              cond = function()
+                local ok, clients = pcall(vim.lsp.get_active_clients, { name = "copilot", bufnr = 0 })
+                return ok and #clients > 0
+              end,
+              color = fg("Special"),
+            },
             {
               "diagnostics",
               symbols = {
