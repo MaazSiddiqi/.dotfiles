@@ -6,15 +6,15 @@ return {
     cmd = "Telescope",
     version = false, -- telescope did only one release, so use HEAD for now
     keys = {
-      { "<leader>fj", "<cmd>Telescope find_files<cr>" },
-      { "<leader>fk", "<cmd>Telescope buffers show_all_buffers=true<cr>" },
+      { "<leader>f", "<cmd>Telescope find_files<cr>" },
+      { "<leader>sB", "<cmd>Telescope buffers show_all_buffers=true<cr>" },
       { "<leader>/", "<cmd>Telescope live_grep<cr>" },
       -- find
-      { "<leader>fb", "<cmd>Telescope buffers<cr>" },
+      { "<leader>sb", "<cmd>Telescope buffers<cr>" },
       { "<leader>:", "<cmd>Telescope oldfiles<cr>" },
       -- search
-      { "<leader>fl", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
-      { "<leader>fL", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
+      { "<leader>ld", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
+      { "<leader>lD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
     },
     opts = {
       defaults = {
