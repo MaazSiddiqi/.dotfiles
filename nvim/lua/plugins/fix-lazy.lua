@@ -32,6 +32,10 @@ return {
     enabled = false,
   },
   {
+    "folke/flash.nvim",
+    enabled = false,
+  },
+  {
     "folke/noice.nvim",
     opts = {
       notify = {
