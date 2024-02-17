@@ -75,7 +75,7 @@ return {
         desc = "Goto Definition",
         has = "definition",
       }
-      keys[#keys + 1] = { "lr", "<cmd>Telescope lsp_references<cr>", desc = "References" }
+      keys[#keys + 1] = { "<leader>lr", "<cmd>Telescope lsp_references<cr>", desc = "References" }
       keys[#keys + 1] = { "gd", vim.lsp.buf.declaration, desc = "Goto Declaration" }
       keys[#keys + 1] = {
         "gi",
@@ -116,6 +116,9 @@ return {
         has = "codeAction",
       }
     end,
+    opts = {
+      autoformat = false,
+    },
   },
 
   -- auto completion
@@ -219,8 +222,8 @@ return {
             ctx.range.scol,
           }
         elseif ctx.cmotion == U.cmotion.v or ctx.cmotion == U.cmotion.V then
-          location = require("ts_context_commentstring.utils").get_visual_start_location()
         end
+        location = require("ts_context_commentstring.utils").get_visual_start_location()
 
         return require("ts_context_commentstring").calculate_commentstring({
           key = type,
@@ -231,6 +234,9 @@ return {
     },
     lazy = false,
   },
+  {
+    "kylechui/nvim-surround",
+  },
 
   {
     "stevearc/conform.nvim",
@@ -239,7 +245,7 @@ return {
       {
         "<leader>lf",
         function()
-          require("conform").format({ formatters = { "injected" } })
+          require("conform").format()
         end,
         mode = { "n", "v" },
         desc = "Format Injected Langs",

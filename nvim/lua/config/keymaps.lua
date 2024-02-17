@@ -126,3 +126,6 @@ map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>")
 map("n", "]<tab>", "<cmd>tabnext<cr>")
 map("n", "<leader><tab>d", "<cmd>tabclose<cr>")
 map("n", "[<tab>", "<cmd>tabprevious<cr>")
+
+-- lsp
+map("n", "<leader>lF", "<cmd>lua vim.lsp.buf.format()<cr>")
