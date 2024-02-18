@@ -1,3 +1,5 @@
 bootstrap.sh
 LICENSE
 Brewfile
+Brewfile.lock.json
+.git
