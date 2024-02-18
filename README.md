@@ -1,5 +1,15 @@
 # My dotfiles
 
+<!--toc:start-->
+
+- [My dotfiles](#my-dotfiles)
+  - [Getting Started](#getting-started)
+    - [Bootstrap and autoconfigure](#bootstrap-and-autoconfigure)
+    - [Manual Install](#manual-install)
+  - [FAQ](#faq)
+  - [References and Honorable Mentions](#references-and-honorable-mentions)
+  <!--toc:end-->
+
 This repository contains a collection of my configurations for my most frequently used tools. I've heavily focused my configurations around a vim-friendly workflow running on MacOS.
 
 ## Getting Started
@@ -69,3 +79,10 @@ stow -d /path/to/repo -t ~/ /path/to/repo
 # install brew bundle
 brew bundle --file=/path/to/repo/Brewfile
 ```
+
+## References and Honorable Mentions
+
+A lot of my configurations were inspired by others! Here are a few:
+
+- [Wezterm: Whole configuration from @basokant](https://github.com/basokant/dotfiles/tree/main/.config/wezterm)
+- [Neovim: Some awesome keymaps by @ThePrimeagen](https://github.com/ThePrimeagen/init.lua/blob/249f3b14cc517202c80c6babd0f9ec548351ec71/lua/theprimeagen/remap.lua)
