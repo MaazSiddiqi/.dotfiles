@@ -13,5 +13,5 @@ stow -d ~/.dotfiles -t ~/ ~/.dotfiles
 
 echo ""
 echo "========================="
-echo "Installing dotfiles..."
+echo "Installed dotfiles!"
 echo "========================="
