@@ -54,8 +54,6 @@ Don't want to download to `~/.dotfiles`? Read here.
 
 **I don't want to download the repository to `~/.dotfiles`, what should I do?**
 
-No worries! Unfortunately, you won't be able to use any of the scripts, but it is still possible to manually set up these configurations.
-
 Before proceeding, ensure you have **Homebrew** installed. You can easily check using:
 
 ```zsh
