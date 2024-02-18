@@ -28,3 +28,5 @@ echo ""
 echo "======================"
 echo "Finished Bootstrapping"
 echo "======================"
+
+bash ~/.dotfiles/install.sh
