@@ -21,7 +21,7 @@ Features of this bootstrap:
 - Download these configurations to `~/.dotfiles`
 - Run the install script
 
-### Manual Clone
+### Manual Install
 
 If you would like to setup these configurations manually, start by cloning this repository to `~/.dotfiles`:
 
