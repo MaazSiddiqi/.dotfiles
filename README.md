@@ -2,12 +2,11 @@
 
 <!--toc:start-->
 
-- [My dotfiles](#my-dotfiles)
-  - [Getting Started](#getting-started)
-    - [Bootstrap and autoconfigure](#bootstrap-and-autoconfigure)
-    - [Manual Install](#manual-install)
-  - [References and Honorable Mentions](#references-and-honorable-mentions)
-  <!--toc:end-->
+- [Getting Started](#getting-started)
+  - [Bootstrap and autoconfigure](#bootstrap-and-autoconfigure)
+  - [Manual Install](#manual-install)
+- [References and Honorable Mentions](#references-and-honorable-mentions)
+<!--toc:end-->
 
 This repository contains a collection of my configurations for my most frequently used tools. I've heavily focused my configurations around a vim-friendly workflow running on MacOS.
 
