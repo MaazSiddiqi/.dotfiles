@@ -73,11 +73,11 @@ Assuming you want to keep this repository at `/path/to/repo`, run the following 
 # clone the repo
 git clone https://github.com/MaazSiddiqi/.dotfiles /path/to/repo
 
-# set up symlinks
-stow -d /path/to/repo -t ~/ /path/to/repo
+# navigate to repo
+cd /path/to/repo
 
-# install brew bundle
-brew bundle --file=/path/to/repo/Brewfile
+# run install
+/bin/bash install.sh
 ```
 
 ## References and Honorable Mentions
