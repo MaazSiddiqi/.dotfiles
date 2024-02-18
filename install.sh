@@ -6,10 +6,10 @@ echo "========================="
 echo ""
 
 echo "[INFO] Installing brew bundle"
-brew bundle --file=~/.dotfiles/Brewfile
+brew bundle
 
 echo "[INFO] Installed configs"
-stow -d ~/.dotfiles -t ~/ ~/.dotfiles
+stow -t ~/ .
 
 echo ""
 echo "========================="
