@@ -87,4 +87,6 @@ _fzf_compgen_dir() {
 # Set bat theme
 export BAT_THEME="Catppuccin Mocha"
 
+alias ls="eza --color=always --git"
+
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
