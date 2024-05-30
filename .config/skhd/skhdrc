@@ -68,10 +68,12 @@ shift + alt - 9 : yabai -m window --space 9;
 shift + alt - 0 : yabai -m window --space 10;
 
 # Focus next space by mission-control index if one exists, otherwise focus the first space
-cmd + shift - l : yabai -m space --focus next || yabai -m space --focus first
+# cmd + shift - l : yabai -m space --focus next || yabai -m space --focus first
+cmd + shift - l : yabai -m space --focus next # disable cycle
 
 # Focus previous space by mission-control index if one exists, otherwise focus the last space
-cmd + shift - h : yabai -m space --focus prev || yabai -m space --focus last
+# cmd + shift - h : yabai -m space --focus prev || yabai -m space --focus last
+cmd + shift - h : yabai -m space --focus prev # disable cycle
 
 # focus space #
 alt - 1 : yabai -m space --focus 1;
