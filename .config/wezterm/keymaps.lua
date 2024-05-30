@@ -12,10 +12,10 @@ M.keys = {
 
 	-- Pane keybindings
 	-- move between split panes
-	split.nav("move", "h"),
-	split.nav("move", "j"),
-	split.nav("move", "k"),
-	split.nav("move", "l"),
+	-- split.nav("move", "h"),
+	-- split.nav("move", "j"),
+	-- split.nav("move", "k"),
+	-- split.nav("move", "l"),
 
 	{ key = "s", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
