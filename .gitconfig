@@ -4,3 +4,5 @@
 	email = msidd54@uwo.ca
 	name = Maaz Ali Siddiqi
 
+[init]
+	defaultBranch = main
