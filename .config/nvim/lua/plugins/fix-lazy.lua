@@ -238,20 +238,20 @@ return {
     "kylechui/nvim-surround",
   },
 
-  {
-    "stevearc/conform.nvim",
-    keys = {
-      { "<leader>cF", false },
-      {
-        "<leader>lf",
-        function()
-          require("conform").format()
-        end,
-        mode = { "n", "v" },
-        desc = "Format Injected Langs",
-      },
-    },
-  },
+  -- {
+  --   "stevearc/conform.nvim",
+  --   keys = {
+  --     { "<leader>cF", false },
+  --     {
+  --       "<leader>lf",
+  --       function()
+  --         require("conform").format()
+  --       end,
+  --       mode = { "n", "v" },
+  --       desc = "Format Injected Langs",
+  --     },
+  --   },
+  -- },
 
   -- A file explorer tree for neovim written in lua
   {
