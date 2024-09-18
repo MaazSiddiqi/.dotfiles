@@ -1,41 +1,5 @@
 return {
   {
-    "echasnovski/mini.surround",
-    enabled = false,
-  },
-  {
-    "echasnovski/mini.comment",
-    enabled = false,
-  },
-  {
-    "echasnovski/mini.indentscope",
-    enabled = false,
-  },
-  {
-    "nvimdev/dashboard-nvim",
-    enabled = false,
-  },
-  {
-    "dstein64/vim-startuptime",
-    enabled = false,
-  },
-  {
-    "folke/persistence.nvim",
-    enabled = false,
-  },
-  {
-    "akinsho/bufferline.nvim",
-    enabled = false,
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-  },
-  {
-    "folke/flash.nvim",
-    enabled = false,
-  },
-  {
     "folke/noice.nvim",
     opts = {
       notify = {
@@ -237,21 +201,6 @@ return {
   {
     "kylechui/nvim-surround",
   },
-
-  -- {
-  --   "stevearc/conform.nvim",
-  --   keys = {
-  --     { "<leader>cF", false },
-  --     {
-  --       "<leader>lf",
-  --       function()
-  --         require("conform").format()
-  --       end,
-  --       mode = { "n", "v" },
-  --       desc = "Format Injected Langs",
-  --     },
-  --   },
-  -- },
 
   -- A file explorer tree for neovim written in lua
   {
