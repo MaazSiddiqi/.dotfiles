@@ -110,5 +110,5 @@ shift + alt - 0x29 : open -a spotify
 shift + alt - c : open -a cursor
 shift + alt - i : open -a /Applications/Notion.app;
 shift + alt - o : open -a /Applications/Microsoft\ Outlook.app;      # 0x29 => ;
-shift + alt - s : open -a slack
+shift + alt - a : open -a /Applications/Slack.app;
 shift + alt - d : open -a /Applications/Discord.app;
