@@ -1,5 +1,4 @@
 export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
 export CLICOLOR=1
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
