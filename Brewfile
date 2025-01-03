@@ -3,19 +3,13 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
-tap "ngrok/ngrok"
-tap "planetscale/tap"
-tap "teamookla/speedtest"
+
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Python code formatter
 brew "black"
 # Core application library for C
 brew "glib"
-# Securely send things from one computer to another
-brew "croc"
-# Generate documentation for several programming languages
-brew "doxygen"
 # AST-based pattern checker for JavaScript
 brew "eslint"
 # Modern, maintained replacement for ls
@@ -34,8 +28,6 @@ brew "gh"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Improved top (interactive process viewer)
 brew "htop"
 # Interactive environments for writing and running code
@@ -66,18 +58,8 @@ brew "prettier"
 brew "pyright"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Python interface to Tcl/Tk
-brew "python-tk@3.11"
-# Cross-platform application and UI framework
-brew "qt"
-# Software environment for statistical computing
-brew "r"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Low-level access to audio, keyboard, mouse, joystick, and graphics
-brew "sdl2"
-# Multi-media library with bindings for multiple languages
-brew "sfml"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -88,8 +70,6 @@ brew "stylua"
 brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
-# Command-line interface for Vercel
-brew "vercel-cli"
 # Internet file retriever
 brew "wget"
 # JavaScript package manager
@@ -106,10 +86,6 @@ brew "jesseduffield/lazygit/lazygit"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
-# The PlanetScale CLI
-brew "planetscale/tap/pscale"
-# Ookla Speedtest
-brew "teamookla/speedtest/speedtest"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -142,18 +118,12 @@ cask "microsoft-word"
 cask "notion"
 # Calendar for professionals and teams
 cask "notion-calendar"
-# Administration and development platform for PostgreSQL
-cask "pgadmin4"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Online multiplayer game platform
-cask "roblox"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Email client
-cask "superhuman"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Video communication and virtual meeting platform
