@@ -46,6 +46,15 @@ return {
       },
     },
   },
+  {
+    "snacks.nvim",
+    opts = {
+      scroll = { enabled = false },
+      indent = {
+        scope = { enabled = false },
+      },
+    },
+  },
   -- LSP keymaps
   {
     "neovim/nvim-lspconfig",
@@ -59,7 +68,7 @@ return {
         desc = "Goto Definition",
         has = "definition",
       }
-      keys[#keys + 1] = { "<leader>lr", "<cmd>Telescope lsp_references<cr>", desc = "References" }
+      keys[#keys + 1] = { "<leader>lr", "<cmd>FzfLua lsp_references<cr>", desc = "References" }
       keys[#keys + 1] = { "gd", vim.lsp.buf.declaration, desc = "Goto Declaration" }
       keys[#keys + 1] = {
         "gi",
@@ -102,6 +111,14 @@ return {
     end,
     opts = {
       autoformat = false,
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = {
+        enabled = false,
+      },
     },
   },
 }
