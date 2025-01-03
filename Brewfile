@@ -6,76 +6,167 @@ tap "koekeishiya/formulae"
 tap "ngrok/ngrok"
 tap "planetscale/tap"
 tap "teamookla/speedtest"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Python code formatter
 brew "black"
+# Core application library for C
+brew "glib"
+# Securely send things from one computer to another
+brew "croc"
+# Generate documentation for several programming languages
 brew "doxygen"
+# AST-based pattern checker for JavaScript
 brew "eslint"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# Zstandard is a real-time compression algorithm
 brew "zstd"
+# GNU compiler collection
 brew "gcc"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Improved top (interactive process viewer)
 brew "htop"
+# Interactive environments for writing and running code
+brew "jupyterlab"
+# Lazier way to manage everything docker
 brew "lazydocker"
+# Terminal file manager
 brew "lf"
+# TIFF library and utilities
+brew "libtiff"
+# Next-gen compiler infrastructure
+brew "llvm"
+# Powerful, lightweight programming language
 brew "lua"
+# Development kit for the Java programming language
 brew "openjdk"
+# Java-based project management
 brew "maven"
+# Open source relational database management system
 brew "mysql"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
+# Optimized BLAS library
 brew "openblas"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
+# Static type checker for Python
 brew "pyright"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Python interface to Tcl/Tk
 brew "python-tk@3.11"
+# Cross-platform application and UI framework
 brew "qt"
+# Software environment for statistical computing
 brew "r"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
 brew "sdl2"
+# Multi-media library with bindings for multiple languages
 brew "sfml"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Opinionated Lua code formatter
 brew "stylua"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Terminal multiplexer
 brew "tmux"
+# Command-line interface for Vercel
 brew "vercel-cli"
+# Internet file retriever
 brew "wget"
+# JavaScript package manager
 brew "yarn"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# prettier, on SPEED!
 brew "fsouza/prettierd/prettierd"
+# A simple terminal UI for git commands, written in Go
 brew "jesseduffield/lazygit/lazygit"
+# Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# The PlanetScale CLI
 brew "planetscale/tap/pscale"
+# Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Video calls designed for energy, ideas and action
+cask "around"
+# Write, edit, and chat about your code with AI
+cask "cursor"
+# Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
 cask "docker"
+# Collaborative team software
 cask "figma"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Provides updates to various Microsoft products
 cask "microsoft-auto-update"
+# Spreadsheet software
 cask "microsoft-excel"
+# Email client
 cask "microsoft-outlook"
+# Presentation software
 cask "microsoft-powerpoint"
+# Word processor
 cask "microsoft-word"
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Calendar for professionals and teams
+cask "notion-calendar"
+# Administration and development platform for PostgreSQL
 cask "pgadmin4"
-cask "qtspim"
-cask "readdle-spark"
-cask "rstudio"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Online multiplayer game platform
+cask "roblox"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# Email client
+cask "superhuman"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Video communication and virtual meeting platform
 cask "zoom"
 vscode "1nvitr0.invert-if"
 vscode "1yib.rust-bundle"
 vscode "aaron-bond.better-comments"
 vscode "albert.tabout"
+vscode "anysphere.pyright"
 vscode "bradlc.vscode-tailwindcss"
 vscode "burkeholland.simple-react-snippets"
 vscode "catppuccin.catppuccin-vsc"
+vscode "chaitanyashahare.lazygit"
 vscode "chakrounanas.turbo-console-log"
 vscode "chouzz.vscode-better-align"
 vscode "christian-kohler.npm-intellisense"
@@ -91,14 +182,13 @@ vscode "dsznajder.es7-react-js-snippets"
 vscode "dustypomerleau.rust-syntax"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
+vscode "fill-labs.dependi"
 vscode "formulahendry.auto-rename-tag"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.copilot-labs"
 vscode "github.vscode-pull-request-github"
 vscode "golang.go"
 vscode "harry-ross-software.c-snippets"
 vscode "heybourn.headwind"
+vscode "jdinhlife.gruvbox"
 vscode "juanblanco.solidity"
 vscode "leetcode.vscode-leetcode"
 vscode "madhavd1.javadoc-tools"
@@ -138,7 +228,6 @@ vscode "redhat.vscode-xml"
 vscode "richie5um2.vscode-sort-json"
 vscode "ritwickdey.liveserver"
 vscode "rust-lang.rust-analyzer"
-vscode "serayuzgur.crates"
 vscode "sleistner.vscode-fileutils"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "sumneko.lua"
@@ -149,13 +238,13 @@ vscode "tyriar.sort-lines"
 vscode "vadimcn.vscode-lldb"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscjava.vscode-gradle"
 vscode "vscjava.vscode-java-debug"
 vscode "vscjava.vscode-java-pack"
 vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-maven"
 vscode "vscode-icons-team.vscode-icons"
 vscode "vscodevim.vim"
-vscode "withfig.fig"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
 vscode "zainchen.json"
