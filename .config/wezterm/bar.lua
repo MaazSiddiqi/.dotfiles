@@ -93,26 +93,26 @@ end
 
 M.setup = function(config)
 	-- Tab bar colour changes
-	config.colors.tab_bar = {
-		background = "#181825",
-		inactive_tab = {
-			fg_color = "#a6adc8",
-			bg_color = "#181825",
-		},
-		new_tab = {
-			bg_color = "#1e1e2e",
-			fg_color = "#b7bdf8",
-		},
-		new_tab_hover = {
-			bg_color = "#b7bdf8",
-			fg_color = "#1e1e2e",
-		},
-	}
-
+	-- config.colors.tab_bar = {
+	-- 	background = "#181825",
+	-- 	inactive_tab = {
+	-- 		fg_color = "#a6adc8",
+	-- 		bg_color = "#181825",
+	-- 	},
+	-- 	new_tab = {
+	-- 		bg_color = "#1e1e2e",
+	-- 		fg_color = "#b7bdf8",
+	-- 	},
+	-- 	new_tab_hover = {
+	-- 		bg_color = "#b7bdf8",
+	-- 		fg_color = "#1e1e2e",
+	-- 	},
+	-- }
+	--
 	config.tab_bar_at_bottom = true
 
 	apply_left_status()
-	apply_right_status()
+	-- apply_right_status()
 	apply_tab_format()
 end
 

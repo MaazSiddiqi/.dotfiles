@@ -11,7 +11,7 @@ local config = wezterm.config_builder()
 -- end)
 
 -- Colours
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Gruvbox dark, hard (base16)"
 config.colors = {}
 
 -- Font
