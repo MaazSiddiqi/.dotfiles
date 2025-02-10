@@ -1,9 +1,7 @@
-export JAVA_HOME=$(/usr/libexec/java_home)
 export CLICOLOR=1
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-alias lg=lazygit
 
 
 # Basic auto/tab complete:
@@ -72,12 +70,5 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-# Set bat theme
-export BAT_THEME="Catppuccin Mocha"
-
-alias ls="eza --color=always --git"
-
-
-# thefuck alias
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
+alias ls="eza -la --color=always --git"
+alias lg=lazygit
