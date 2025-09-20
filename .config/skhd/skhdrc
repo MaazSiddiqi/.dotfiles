@@ -104,10 +104,11 @@ fn - l : skhd -k "right";
 # cmd - return : open -na /Applications/WezTerm.app
 # shift + alt - 0x2A : open -na /Applications/WezTerm.app;               # 0x2A => \
 shift + alt - j : open -a arc
-shift + alt - k : open -a /Applications/WezTerm.app
+shift + alt - k : open -a /Applications/Ghostty.app
 shift + alt - l : open -a messages;
 shift + alt - 0x29 : open -a spotify
 shift + alt - c : open -a "cursor"
 shift + alt - i : open -a /Applications/Notion.app;
 shift + alt - o : open -a /Applications/Microsoft\ Outlook.app;      # 0x29 => ;
 shift + alt - d : open -a /Applications/Discord.app;
+shift + alt - a : open -a /Applications/Slack.app;
